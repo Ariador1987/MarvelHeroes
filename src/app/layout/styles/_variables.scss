@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --clr-primary: hsl(44, 100%, 50%);
+    --clr-primary-light: hsl(32, 84%, 72%);
+    --clr-primary-dark: hsl(21, 100%, 59%);
+
+    --clr-secondary: hsl(209, 84%, 72%);
+    --clr-secondary-light: hsl(205, 84%, 66%);
+    --clr-secondary-dark: hsl(209, 64%, 44%);
+
+    --clr-accent: hsl(272, 76%, 53%);
+    --clr-accent-light: hsl(272, 83%, 64%);
+    --clr-accent-dark: hsl(260, 100%, 44%);
+
+    --clr-gradient-light: hsl(0, 0%, 56%);
+    --clr-gradient-dark: hsl(0, 0%, 28%);
+
+    --clr-gray-light-1: hsl(0, 0%, 97%);
+    --clr-gray-light-2: hsl(0, 0%, 93%);
+    --clr-gray-light-3: hsl(0, 0%, 88%);
+    --clr-gray-light-4: hsl(0, 0%, 82%);
+
+    --clr-gray-dark-1: hsl(0, 0%, 47%);
+    --clr-gray-dark-2: hsl(0, 0%, 60%);
+    --clr-gray-dark-3: hsl(0, 0%, 20%);
+    --clr-gray-dark-4: hsl(0, 0%, 8%);
+
+    --ff-header: "Montserrat", sans-serif;
+    --ff-body: "Merriweather Sans", sans-serif;
+
+    --light-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.3);
+    --medium-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.45);
+    --dark-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.6);
+
+    --transition: all 0.2s linear;
+
+    --website-width: 1200px;
+}
+
+$gradient-primary: linear-gradient(
+    to right bottom,
+    var(--clr-gray-light-3),
+    var(--clr-gray-dark-2)
+);

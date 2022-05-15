@@ -1,0 +1,13 @@
+@import "variables";
+@import "mixins";
+@import "utilities";
+@import "base";
+@import "layout";
+@import "animation";
+// @import "typography";
+/* project too small, dont want to create partial classes 
+    and reduce readability
+*/
+@import "components/navbar";
+@import "components/card";
+@import "components/footer";

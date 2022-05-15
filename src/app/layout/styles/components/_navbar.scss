@@ -1,0 +1,139 @@
+.nav {
+    padding: 0 2rem;
+    box-shadow: var(--light-shadow);
+    background: var(--clr-secondary-dark);
+    color: #fff;
+    min-height: 7rem;
+    display: flex;
+    align-items: center;
+
+    &__header {
+        padding: 1rem 0;
+        width: 100%;
+        @include flexCenter;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include respond(phone) {
+            gap: 1.8rem;
+        }
+
+        &--heading {
+            text-transform: uppercase;
+            color: var(--clr-primary);
+            letter-spacing: 1.6px;
+        }
+    }
+
+    &__toggle {
+        display: none;
+        @include respond(phone) {
+            display: inline-block;
+            font-size: 3.2rem;
+            color: var(--clr-primary);
+            background: transparent;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__form {
+        @include respond(phone) {
+            order: 1;
+            width: 100%;
+            // text-align: center;
+            @include flexCenter;
+        }
+
+        &--input {
+            padding: 0.8rem 1.4rem;
+            min-height: 2.4rem;
+            outline: 1px solid transparent;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.8rem;
+            font-family: var(--ff-body);
+            transition: 0.4s ease;
+            min-width: 22rem;
+
+            &::placeholder {
+                font-style: italic;
+                font-weight: 600;
+            }
+
+            &:focus,
+            &:active {
+                outline: 1px solid var(--clr-primary);
+            }
+        }
+    }
+
+    &-links {
+        @include flexCenter;
+        padding: 0.8rem 1.6rem;
+
+        @include respond(phone) {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__link {
+            text-transform: uppercase;
+            display: inline-block;
+            height: 100%;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+            letter-spacing: 1.4px;
+            cursor: pointer;
+            color: inherit;
+            background-color: inherit;
+            border-bottom: 3px solid transparent;
+            transition: border-bottom 0.3s;
+            will-change: border-bottom;
+            backface-visibility: hidden;
+
+            &:hover {
+                border-bottom: 3px solid var(--clr-primary);
+            }
+
+            &.active {
+                color: var(--clr-primary-dark);
+            }
+
+            @include respond(phone) {
+                border-bottom: none;
+                font-size: 2.4rem;
+                margin-right: 0;
+                margin-bottom: 1.4rem;
+
+                &:hover {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__container {
+            transition: var(--transition);
+            backface-visibility: hidden;
+            @include flexCenter;
+
+            &.show-container {
+                max-height: auto;
+                opacity: 1;
+            }
+
+            @include respond(phone) {
+                order: 2;
+                width: 100%;
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.main {
+    padding: 2.25rem 2.75rem 2.75rem;
+}
+
+.heroes,
+.bookmarks {
+    padding: 2.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--clr-gray-light-3);
+}
+
+.heroes {
+    background-color: var(--clr-gray-light-3);
+}
+
+.bookmarks {
+    background-image: linear-gradient(
+            to bottom right,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url(../../assets/marvelHeroesWallpaper.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    min-height: 80vh;
+}
+
+.grid {
+    display: grid;
+    gap: 2.5rem;
+
+    @include respond(phone) {
+        gap: 3rem;
+    }
+
+    &--5x1 {
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

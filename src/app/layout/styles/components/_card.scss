@@ -1,0 +1,177 @@
+.card {
+    max-width: 28rem;
+    height: 45rem;
+    border-radius: 8px;
+    background: linear-gradient(
+        to bottom right,
+        var(--clr-gradient-light),
+        var(--clr-gradient-dark)
+    );
+    color: #fff;
+    box-shadow: var(--medium-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    backface-visibility: hidden;
+    will-change: transform;
+
+    &:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: var(--dark-shadow);
+
+        & .card__figure--appearances {
+            opacity: 1;
+        }
+
+        & .card__figure--image {
+            filter: saturate(1.3);
+        }
+    }
+
+    &__figure {
+        height: 60%;
+        position: relative;
+
+        &--appearances {
+            position: absolute;
+            color: var(--clr-primary);
+            font-size: 1.4rem;
+            height: 2.2rem;
+            width: 2.2rem;
+            padding: 1.3rem;
+            top: 5%;
+            left: 5%;
+            z-index: 1;
+            @include flexCenter;
+            font-weight: 600;
+            transition: var(--transition);
+            opacity: 0;
+
+            small {
+                @include posAbsCenter;
+                transform: translate(20%, -50%);
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: inherit;
+                letter-spacing: 0.8px;
+            }
+
+            @include respond(phone) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &--favorite {
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            position: absolute;
+            color: var(--clr-primary);
+            opacity: 0.8;
+            top: 5%;
+            right: 5%;
+            z-index: 1;
+        }
+
+        &--image {
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+            transition: var(--transition);
+        }
+
+        &--title {
+            position: absolute;
+            height: 18%;
+            padding: 2rem 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: var(--clr-primary);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            z-index: 1;
+            @include flexCenter;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: #000;
+                z-index: -1;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &__content {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: center;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        word-break: break-word;
+        margin-bottom: auto;
+        width: calc(100%);
+        padding: 1.4rem 2.2rem 0;
+        text-overflow: ellipsis;
+        text-align: left;
+        font-size: 1.4rem;
+
+        @include respond(tab-port) {
+            min-width: 252px;
+            -webkit-line-clamp: 3;
+        }
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+            min-width: 224px;
+        }
+    }
+
+    &__cta,
+    &__remove {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.5rem;
+        font-family: var(--ff-header);
+        letter-spacing: 1.1px;
+        cursor: pointer;
+        box-shadow: var(--light-shadow);
+        background: linear-gradient(
+            to bottom right,
+            var(--clr-secondary),
+            var(--clr-secondary-dark)
+        );
+        color: #fff;
+        margin: 0 auto 1.2rem;
+        padding: 0.6rem 0;
+        border-radius: 10px;
+        width: 80%;
+        border: none;
+
+        &:hover {
+            color: var(--clr-primary);
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    &__remove {
+        background: var(--clr-accent-light);
+    }
+}

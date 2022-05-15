@@ -1,0 +1,27 @@
+.footer {
+    height: min-content;
+    background-color: var(--clr-gray-dark-3);
+    color: var(--clr-accent);
+    font-size: 1.4rem;
+    @include flexCenter;
+    overflow: hidden;
+
+    &__info {
+        margin: 1.5rem 0 0.85rem;
+        @include flexCenter;
+        flex-direction: column;
+        max-width: 40rem;
+
+        &--para {
+            text-transform: uppercase;
+            font-size: 1.3rem;
+        }
+
+        &--img {
+            height: 8rem;
+            width: 8rem;
+            display: inline-block;
+            object-fit: cover;
+        }
+    }
+}

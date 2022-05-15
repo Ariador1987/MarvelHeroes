@@ -1,0 +1,19 @@
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-button {
+    animation: fadeInButton;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    // will change visibility in utilities > btn btn--back-to-top
+    visibility: visible;
+}
