@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/LogoBojaRaster-sRGB.png";
 
 const Footer = () => {
+    //eslint-disable-next-line
     const [date, setDate] = useState(new Date().getUTCFullYear());
 
     return (

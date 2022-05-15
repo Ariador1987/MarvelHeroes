@@ -72,7 +72,7 @@ export const AppProvider = ({ children }: PropsWithChildren<any>) => {
         fetchHeroes();
     }, [fetchHeroes]);
 
-    // used by back-to-top btn
+    // used by BtnBackToTop
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const [entry] = entries;

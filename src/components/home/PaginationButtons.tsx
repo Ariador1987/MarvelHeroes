@@ -1,7 +1,7 @@
 import { useAppContext } from "../../app/context/AppContext";
 import { ITEM_MAX_LIMIT } from "../../app/utilities/paramsFactory";
 
-const Buttons = () => {
+const PaginationButtons = () => {
     const {
         offset,
         currentPage,
@@ -72,4 +72,4 @@ const Buttons = () => {
     );
 };
 
-export default Buttons;
+export default PaginationButtons;

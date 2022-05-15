@@ -1,6 +1,6 @@
-import Buttons from "../../../components/home/PaginationButtons";
+import PaginationButtons from "../../../components/home/PaginationButtons";
 import HeroCard from "../../../components/shared/HeroCard";
-import LoadingComponent from "../../../components/shared/LoadingIndicator";
+import LoadingIndicator from "../../../components/shared/LoadingIndicator";
 import { useAppContext } from "../../context/AppContext";
 import { Hero } from "../../models/hero";
 import NotFoundPage from "./NotFoundPage";
@@ -9,7 +9,7 @@ const HomePage = () => {
     const { heroes, isLoading } = useAppContext();
 
     if (isLoading) {
-        return <LoadingComponent />;
+        return <LoadingIndicator />;
     }
 
     if (!heroes || heroes.length === 0) {
@@ -24,7 +24,7 @@ const HomePage = () => {
                 </h2>
                 <div className="underline"></div>
                 <div className="container--buttons mb--3">
-                    <Buttons />
+                    <PaginationButtons />
                 </div>
                 <div className="grid grid--5x1 mb--3">
                     {heroes.map((hero: Hero) => {

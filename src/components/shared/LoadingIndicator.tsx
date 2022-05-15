@@ -5,7 +5,7 @@ interface Props {
     message?: string;
 }
 
-const LoadingComponent = ({ message = "Loading..." }: Props) => {
+const LoadingIndicator = ({ message = "Loading..." }: Props) => {
     return (
         <div className="loading">
             <img className="loading__spinner" src={spinner} alt="spinner" />
@@ -14,4 +14,4 @@ const LoadingComponent = ({ message = "Loading..." }: Props) => {
     );
 };
 
-export default LoadingComponent;
+export default LoadingIndicator;

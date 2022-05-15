@@ -3,7 +3,7 @@ import Navbar from "./layout/Navbar";
 import NotFoundPage from "./layout/pages/NotFoundPage";
 import HomePage from "./layout/pages/HomePage";
 import BookmarksPage from "./layout/pages/BookmarksPage";
-import LoadingComponent from "../components/shared/LoadingIndicator";
+import LoadingIndicator from "../components/shared/LoadingIndicator";
 import BtnBackToTop from "../components/shared/BtnBackToTop";
 import Footer from "./layout/Footer";
 
@@ -16,7 +16,7 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/bookmarks" element={<BookmarksPage />} />
                     <Route path="/notfound" element={<NotFoundPage />} />
-                    <Route path="/spinner" element={<LoadingComponent />} />
+                    <Route path="/spinner" element={<LoadingIndicator />} />
                     {/* 
                         i put catch all route last because when its on netlify
                         it doesn't work, but locally it does, i think its due to 

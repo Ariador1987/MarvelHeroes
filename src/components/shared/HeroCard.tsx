@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { FaStar } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { useAppContext } from "../../app/context/AppContext";
