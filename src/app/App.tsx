@@ -3,8 +3,8 @@ import Navbar from "./layout/Navbar";
 import NotFoundPage from "./layout/pages/NotFoundPage";
 import HomePage from "./layout/pages/HomePage";
 import BookmarksPage from "./layout/pages/BookmarksPage";
-import LoadingComponent from "../features/shared/LoadingComponent";
-import BtnBackToTop from "../features/shared/BtnBackToTop";
+import LoadingComponent from "../components/shared/LoadingIndicator";
+import BtnBackToTop from "../components/shared/BtnBackToTop";
 import Footer from "./layout/Footer";
 
 function App() {

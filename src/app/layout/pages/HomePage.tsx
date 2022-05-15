@@ -1,6 +1,6 @@
-import Buttons from "../../../features/home/Buttons";
-import HeroCard from "../../../features/shared/HeroCard";
-import LoadingComponent from "../../../features/shared/LoadingComponent";
+import Buttons from "../../../components/home/PaginationButtons";
+import HeroCard from "../../../components/shared/HeroCard";
+import LoadingComponent from "../../../components/shared/LoadingIndicator";
 import { useAppContext } from "../../context/AppContext";
 import { Hero } from "../../models/hero";
 import NotFoundPage from "./NotFoundPage";

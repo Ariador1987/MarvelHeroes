@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import SearchForm from "../../features/shared/SearchForm";
+import SearchForm from "../../components/shared/SearchForm";
 import { useAppContext } from "../context/AppContext";
 
 const navLinks = [

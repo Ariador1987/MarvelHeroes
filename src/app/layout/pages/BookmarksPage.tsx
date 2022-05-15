@@ -1,4 +1,4 @@
-import HeroCard from "../../../features/shared/HeroCard";
+import HeroCard from "../../../components/shared/HeroCard";
 import { useAppContext } from "../../context/AppContext";
 import NotFoundPage from "./NotFoundPage";
 import { Hero } from "../../models/hero";
