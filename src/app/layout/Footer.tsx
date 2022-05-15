@@ -4,8 +4,6 @@ import logo from "../assets/LogoBojaRaster-sRGB.png";
 const Footer = () => {
     const [date, setDate] = useState(new Date().getUTCFullYear());
 
-    // tried to put my svg logo here but it took my soul
-    // and since its more or less irrelevant did this quick and dirty
     return (
         <footer className="footer">
             <div className="footer__info">

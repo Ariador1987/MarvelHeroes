@@ -7,7 +7,6 @@ import NotFoundPage from "./NotFoundPage";
 
 const HomePage = () => {
     const { heroes, isLoading } = useAppContext();
-    // heroes[0].isFavorite = true;
 
     if (isLoading) {
         return <LoadingComponent />;

@@ -45,7 +45,6 @@ const Navbar = () => {
                     <ul className="nav-links" ref={linksRef}>
                         {navLinks.map((link) => {
                             return (
-                                // Used Navlink to get .active class by default, defined in layout => styles => components => navbar
                                 <li key={link.path}>
                                     <NavLink
                                         className="nav-links__link"
