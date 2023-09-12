@@ -7,4 +7,4 @@
 
 ##### Project Overview
 
--   Project is **deployed** and can be found at https://marvelheroesblank.netlify.app/
+-   Project is **deployed** and can be found at https://marvelheroesportfolio.netlify.app/ 
